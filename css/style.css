@@ -8,30 +8,48 @@ html {
 }
 body {
     font-family: "Inter", sans-serif;
+    padding: 1 1rem;
     display: grid;
     color: hsl(0, 0%, 100%);
-    background-color: hsl(228, 100%, 60%);
+    background-color: hsl(228, 99%, 58%);
+}
+.img {
+    width: 100%;
 }
 header {
     font-size: 2.5rem;
     padding: 3rem;
-    display: inline-block;
-    gap: 5rem;
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
-    color: hsl(0, 0%, 95%);
+    color: hsl(0, 0%, 90%);
     border-bottom: 1px solid hsl(224, 100%, 95%);
     background-color: hsl(228, 100%, 60%);
+    display: inline-block;
+    gap: 5rem;
+    align-items: center;
     z-index: 1000;
+}
+.siteName {
+    font-size: 1.5rem;
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: .5rem;
+    align-items: center;
+}
+.siteIcon {
+    font-size: 2rem;
+    color: hsl(0, 0%, 100%);
 }
 .menuToggle {
     display: none;
 }
 .menuIcon {
     position: absolute;
-    top: 2rem;
+    top: 2.5rem;
     right: 3rem;
     font-size: 3rem;
     cursor: pointer;
@@ -66,6 +84,18 @@ header {
 .menuToggle:checked ~ .navigationList ul {
     display: block;
 }
+.siteHeader:has(.menuToggle:checked) ~ main::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
 main {
     margin-top: 5rem;
 }
@@ -78,14 +108,14 @@ main {
 }
 .hero h1 {
     font-size: 4.5rem;
-    font-weight: 700;
+    font-weight: 400;
     margin-bottom: 1rem;
     color: hsl(0, 0%, 100%);
 }
 .hero p {
-    font-size: 1.9rem;
-    line-height: 1.5;
-    color: hsl(224, 100%, 95%);
+    font-size: 1.8rem;
+    line-height: 1.7;
+    color: hsl(224, 100%, 90%);
     margin-top: 1rem;
 }
 .statOne {
@@ -96,12 +126,12 @@ main {
 }
 .statOne div {
     display: flex;
-    gap: 24rem;
+    gap: 23rem;
     margin-bottom: 20rem;
     align-items: center;
 }
 .statOne p {
-    color: hsl(224, 100%, 95%);
+    color: hsl(224, 100%, 90%);
 }
 .statTwo {
     font-size: 1.5rem;
@@ -111,12 +141,12 @@ main {
 }
 .statTwo div {
     display: flex;
-    gap: 24rem;
+    gap: 23rem;
     margin-bottom: 20rem;
     align-items: center;
 }
 .statTwo p {
-    color: hsl(224, 100%, 95%);
+    color: hsl(224, 100%, 90%);
 }
 .statThree {
     font-size: 1.5rem;
@@ -126,12 +156,13 @@ main {
 }
 .statThree div {
     display: flex;
-    gap: 24rem;
+    gap: 25rem;
     margin-bottom: 20rem;
     align-items: center;
 }
 .statThree p {
-    color: hsl(224, 100%, 95%);
+    font-size: 1.4rem;
+    color: hsl(224, 100%, 90%);
 }
 .statFour {
     font-size: 1.5rem;
@@ -141,12 +172,13 @@ main {
 }
 .statFour div {
     display: flex;
-    gap: 24rem;
+    gap: 26rem;
     margin-bottom: 20rem;
     align-items: center;
 }
 .statFour p {
-    color: hsl(224, 100%, 95%);
+    font-size: 1.4rem;
+    color: hsl(224, 100%, 90%);
 }
 footer {
     font-size: 1.5rem;

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
@@ -15,18 +15,21 @@
   </style>
 </head>
 <body> 
-    <header>
-      <div class="pageName">
-        <ul>
-          <li>Bridge Collective</li>
-        </ul>
+    <header class="siteHeader">
+      <div class="siteName">
+          <p class="siteIcon">&#9679</p>
+          <p>Bridge Collective</p>
       </div>
 
       <input type="checkbox" id="menuToggle" class="menuToggle">
-      <label for="menuToggle" class="menuIcon">&#9776;</label>
-      <label for="menuToggle" class="closeIcon">&#10005;</label>
+      <label for="menuToggle" class="menuIcon">
+        <img src="assets/images/icon-menu.svg" alt="menu icon">
+      </label>
+      <label for="menuToggle" class="closeIcon">
+        <img src="assets/images/icon-close.svg" alt="close icon">
+      </label>
 
-      <div class="navigationList">
+      <nav class="navigationList">
         <ul>
           <li>About</li>
           <li>Our Work</li>
@@ -34,7 +37,7 @@
           <li>Annual Report</li>
           <li>Donate</li>
         </ul>
-      </div>
+      </nav>
     </header>
 
     <main>
@@ -45,7 +48,7 @@
 
       <section class="statOne">
         <div>
-          <img src="assets/images/icon-sparkle.svg" alt="">
+          <img src="assets/images/icon-sparkle.svg" alt="sparkle icon">
           <h2>2.4M</h2>
         </div>
         <h3>Students reached</h3>
@@ -54,7 +57,7 @@
 
       <section class="statTwo">
         <div>
-         <img src="assets/images/icon-plus.svg" alt="">
+         <img src="assets/images/icon-plus.svg" alt="plus icon">
         <h2>1,284</h2>
         </div>
         <h3>Schools partnered</h3>
@@ -63,7 +66,7 @@
 
       <section class="statThree">
         <div>
-         <img src="assets/images/icon-arrow-right.svg" alt="">
+         <img src="assets/images/icon-arrow-right.svg" alt="arrow right icon">
           <h2>38K</h2>
         </div>
         <h3>Teachers trained</h3>
@@ -72,7 +75,7 @@
 
       <section class="statFour">
         <div>
-         <img src="assets/images/icon-trending-up.svg" alt="">
+         <img src="assets/images/icon-trending-up.svg" alt="trending up icon">
           <h2>3.1×</h2>
         </div>
         <h3>Graduation lift</h3>
