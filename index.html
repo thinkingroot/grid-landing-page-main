@@ -3,7 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
   <link rel="stylesheet" href="css/style.css">
   <title>Frontend Mentor | Grid landing page</title>
@@ -19,6 +21,10 @@
           <li>Bridge Collective</li>
         </ul>
       </div>
+
+      <input type="checkbox" id="menuToggle" class="menuToggle">
+      <label for="menuToggle" class="menuIcon">&#9776;</label>
+      <label for="menuToggle" class="closeIcon">&#10005;</label>
 
       <div class="navigationList">
         <ul>
@@ -47,14 +53,16 @@
       </section>
 
       <section class="statTwo">
+        <div>
          <img src="assets/images/icon-plus.svg" alt="">
-          <h2>1,284</h2>
+        <h2>1,284</h2>
         </div>
         <h3>Schools partnered</h3>
         <p>In 14 countries, from Kenya to Guatemala.</p>
       </section>
 
       <section class="statThree">
+        <div>
          <img src="assets/images/icon-arrow-right.svg" alt="">
           <h2>38K</h2>
         </div>
@@ -63,6 +71,7 @@
       </section>
 
       <section class="statFour">
+        <div>
          <img src="assets/images/icon-trending-up.svg" alt="">
           <h2>3.1×</h2>
         </div>
