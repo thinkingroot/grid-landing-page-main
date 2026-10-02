@@ -18,23 +18,23 @@ body {
     width: .4rem;
     height: .4rem;
 }
-header {
+.siteHeader {
     font-size: 2.5rem;
     height: 8rem;
-    padding: 3rem;
+    padding: 3rem 5rem;
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     color: hsl(0, 0%, 90%);
-    border-bottom: 1px solid hsl(224, 100%, 95%);
+    border-bottom: 1px solid hsl(224, 100%, 58%);
     background-color: hsl(228, 100%, 60%);
-    display: flex;
+    display: block;
     align-items: center;
     z-index: 1000;
 }
 .siteName {
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     text-decoration: none;
     padding: 0;
     margin: 0;
@@ -64,15 +64,16 @@ header {
     font-size: 3rem;
     display: none;
 }
-.navigationList ul{
-    padding: 3rem 0;
+.navigationList {
     position: absolute;
     top: 100%;
-    left: 0;
     right: 0;
-    text-align: center;
-    display: none;
     background-color: hsl(228, 100%, 60%);
+    display: none;
+}
+.navigationList ul{
+    padding: 3rem 0;
+    text-align: center;
 }
 .navigationList li {
     list-style: none;
@@ -84,7 +85,7 @@ header {
 .menuToggle:checked ~ .closeIcon {
     display: block;
 }
-.menuToggle:checked ~ .navigationList ul {
+.menuToggle:checked ~ .navigationList {
     display: block;
 }
 .siteHeader:has(.menuToggle:checked) ~ main::before {
@@ -105,7 +106,7 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    border-bottom: 1px solid hsl(224, 100%, 95%);
+    border-bottom: 1px solid hsl(224, 100%, 70%);
 }
 .hero h1 {
     font-size: 4.5rem;
@@ -123,137 +124,147 @@ header {
     font-size: 1.5rem;
     line-height: 1.5;
     padding: 2rem 2.5rem;
-    border-bottom: 1px solid hsl(224, 100%, 95%);
-}
-.statOne div {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 25rem;
-}
-.statOne div p {
-    font-size: 4rem;
-    text-align: right;
-    color: hsl(0, 0%, 100%);
-}
-.statOne p {
-    color: hsl(224, 100%, 90%);
+    border-bottom: 1px solid hsl(224, 100%, 70%);
 }
 .statTwo {
     font-size: 1.5rem;
     line-height: 1.5;
     padding: 2rem 2.5rem;
-    border-bottom: 1px solid hsl(224, 100%, 95%);
-}
-.statTwo div {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 25rem;
-}
-.statTwo div p {
-    font-size: 4rem;
-    text-align: right;
-    color: hsl(0, 0%, 100%);
-}
-.statTwo p {
-    color: hsl(224, 100%, 90%);
+    border-bottom: 1px solid hsl(224, 100%, 70%);
 }
 .statThree {
     font-size: 1.5rem;
     line-height: 1.5;
     padding: 2rem 2.5rem;
-    border-bottom: 1px solid hsl(224, 100%, 95%);
-}
-.statThree div {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 25rem;
-}
-.statThree div p {
-    font-size: 4rem;
-    text-align: right;
-    color: hsl(0, 0%, 100%);
-}
-.statThree p {
-    font-size: 1.4rem;
-    color: hsl(224, 100%, 90%);
+    border-bottom: 1px solid hsl(224, 100%, 70%);
 }
 .statFour {
     font-size: 1.5rem;
     line-height: 1.5;
     padding: 2rem 2.5rem;
-    border-bottom: 1px solid hsl(224, 100%, 95%);
+    border-bottom: 1px solid hsl(224, 100%, 70%);
 }
-.statFour div {
+.statHeading {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 25rem;
+    grid-template-rows: 30rem;
 }
-.statFour div p {
+.statHeading p {
     font-size: 4rem;
+    font-weight: 600;
     text-align: right;
-    color: hsl(0, 0%, 100%);
+    color: hsl(224, 100%, 100%);
 }
-.statFour p {
+.statComment h3 {
+    font-size: 2rem;
+    font-weight: 400;
+    color: hsl(224, 100%, 90%);
+}
+.statComment p {
     font-size: 1.4rem;
     color: hsl(224, 100%, 90%);
 }
 footer {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     line-height: 1.5;
     padding: 3rem 1rem;
     color: hsl(224, 100%, 95%);
 }
 @media screen and (min-width: 960px) {
-   .mainContent {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: auto;
-        gap: 0px 0px;
-        grid-template-areas:
-            "hero statOne statTwo"
-            "hero statThree statFour";
-    }
-    .hero {
-        grid-area: hero;
-        border: solid 1px hsl(224, 100%, 95%);
-    }
-    .hero:hover {
-        background-color: hsl(220, 100%, 64%);
-    }
-    .statOne {
+.menuIcon {
+    right: 4.5rem;
+}
+.closeIcon {
+    right: 4.5rem;
+}
+.navigationList {
+    font-size: 4rem;
+    width: 29%;
+    height: 100vh;
+    background-color: hsl(228, 100%, 60%);
+}
+.navigationList li {
+    padding-right: 5rem;
+    text-align: right;
+    color: hsl(0, 0%, 100%);
+}
+.navItem1:hover {
+    text-decoration: underline;
+} 
+.navItem2:hover {
+    text-decoration: underline;
+} 
+.navItem3:hover {
+    text-decoration: underline;
+} 
+.navItem4:hover {
+    text-decoration: underline;
+} 
+.navItem5:hover {
+    text-decoration: underline;
+} 
+.mainContent {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 0px 0px;
+    grid-template-areas:
+        "hero statOne statTwo"
+        "hero statThree statFour";
+}
+.hero {
+    padding: 5rem;
+    grid-area: hero;
+    border: solid 1px hsl(224, 100%, 58%);
+}
+.hero:hover {
+        background-color: hsl(220, 100%, 55%);
+}
+.hero div {
+    width: 50rem;
+    height: 35rem;
+}
+.hero h1 {
+    font-size: 7.5rem;
+    margin-bottom: 3rem;
+}
+.hero p{
+    font-size: 2.2rem;
+}
+.statOne {
         grid-area: statOne;
-        border: solid 1px hsl(224, 100%, 95%);
-    }
-    .statOne:hover {
-        background-color: hsl(220, 100%, 64%);
-    }
-    .statTwo {
-        grid-area: statTwo;
-        border: solid 1px hsl(224, 100%, 95%);
-    }
-    .statTwo:hover {
-        background-color: hsl(220, 100%, 64%);
-    }
-    .statThree {
-        grid-area: statThree;
-        border: solid 1px hsl(224, 100%, 95%);
-    }
-    .statThree:hover {
-        background-color: hsl(220, 100%, 64%);
-    }
-    .statFour {
-        grid-area: statFour;
-        border: solid 1px hsl(224, 100%, 95%);
-    }
-    .statFour:hover {
-        background-color: hsl(220, 100%, 64%);
-    }
+        border: solid 1px hsl(224, 100%, 58%);
+}
+.statOne:hover {
+        background-color: hsl(220, 100%, 55%);
+}
+.statTwo {
+    grid-area: statTwo;
+    border: solid 1px hsl(224, 100%, 58%);
+}
+.statTwo:hover {
+    background-color: hsl(220, 100%, 55%);
+}
+.statThree {
+    grid-area: statThree;
+    border: solid 1px hsl(224, 100%, 58%);
+}
+.statThree:hover {
+    background-color: hsl(220, 100%, 55%);
+}
+.statFour {
+    grid-area: statFour;
+    border: solid 1px hsl(224, 100%, 58%);
+}
+.statFour:hover {
+    background-color: hsl(220, 100%, 55%);
+}
 
-    footer {
-        font-size: 2rem;
-        height: 10rem;
-        padding: 2rem 6rem;
-        display: flex;
-        justify-content: space-between;
-    }
+footer {
+    font-size: 2rem;
+    height: 7rem;
+    padding: 3rem 6rem;
+    display: flex;
+    justify-content: space-between;
+}
 }
